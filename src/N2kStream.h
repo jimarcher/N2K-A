@@ -31,6 +31,11 @@ I/O stream used in the NMEA2000 libraries.
 #include <stdint.h>
 #include <stddef.h>
 
+
+#undef ARDUINO
+#undef __AVR__
+
+/*  JWA TEST */
 #ifdef ARDUINO
 // Arduino users get away with using the standard Stream class and its
 // subclasses. Forward declare the Stream class here and include Arduino.h in
