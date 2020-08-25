@@ -153,8 +153,8 @@ void tNMEA2000_esp32::CAN_init() {
     /* Set sampling
      * 1 -> triple; the bus is sampled three times; recommended for low/medium speed buses     (class A and B) where filtering spikes on the bus line is beneficial
      * 0 -> single; the bus is sampled once; recommended for high speed buses (SAE class C)*/
-    //MODULE_CAN->BTR1.B.SAM	=0x1;
-    MODULE_CAN->BTR1.B.SAM	=0x0;
+    MODULE_CAN->BTR1.B.SAM	=0x1;
+    //MODULE_CAN->BTR1.B.SAM	=0x0;
 
     //enable all interrupts
     MODULE_CAN->IER.U = 0xff;
