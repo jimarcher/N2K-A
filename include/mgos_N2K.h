@@ -17,7 +17,7 @@
 extern "C" {
 #endif
 
-bool mgos_N2K_init(void);
+bool mgos_N2K_A_init(void);
 
 #ifdef __cplusplus
 }
