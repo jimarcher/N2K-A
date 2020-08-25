@@ -27,7 +27,7 @@ libraries, I implemented his code directly to the NMEA2000_esp32 to avoid extra
 can.h library, which may cause even naming problem.
 */
 
-#include <math.h> // JWA add this header for round 
+#include <math.h> // JWA add this header for round
 
 #include "soc/dport_reg.h"
 #include "NMEA2000_esp32.h"
@@ -153,7 +153,8 @@ void tNMEA2000_esp32::CAN_init() {
     /* Set sampling
      * 1 -> triple; the bus is sampled three times; recommended for low/medium speed buses     (class A and B) where filtering spikes on the bus line is beneficial
      * 0 -> single; the bus is sampled once; recommended for high speed buses (SAE class C)*/
-    MODULE_CAN->BTR1.B.SAM	=0x1;
+    //MODULE_CAN->BTR1.B.SAM	=0x1;
+    MODULE_CAN->BTR1.B.SAM	=0x0;
 
     //enable all interrupts
     MODULE_CAN->IER.U = 0xff;
