@@ -43,6 +43,9 @@ I/O stream used in the NMEA2000 libraries.
 #include <Arduino.h>
 typedef Stream N2kStream;
 #else
+
+
+
 // Non Arduino platforms need to implement this themselves if they want to use
 // functions which operate on streams.
 class N2kStream {
